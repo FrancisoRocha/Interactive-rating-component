@@ -210,13 +210,14 @@ body {
     height: 36rem;
     background-image: var(--gradient);
     border-radius: 1.5rem;
-    margin-top: -40rem;
+    margin-top: -37rem;
 }
 
 @media (min-width: 768px) {
     .messages {
         width: 41.2rem;
         height: 41.6rem;
+        margin-top: -40rem;
     }
 }
 
