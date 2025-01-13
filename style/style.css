@@ -121,7 +121,7 @@ body {
     }
 }
 
-.ratign {
+.rating {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -139,23 +139,30 @@ body {
 }
 
 @media (min-width: 768px) {
-    .ratign {
+    .rating {
         width: 5.1rem;
         height: 5.1rem;
         font-size: 1.6rem;
     }
 }
 
-.ratign:hover {
+.rating:hover {
     background-color: var(--title);
     color: #262e38;
     transition: all 300ms;
 }
 
-.ratign:active {
-    background-color: var(--btn);
+.rating.active {
+    background-color: var(--btn); /* Color de fondo cuando está seleccionado */
     color: #262e38;
     transition: all 300ms;
+    border-radius: 8px; /* Bordes redondeados */
+    transform: scale(1.1); /* Un ligero aumento al estar seleccionado */
+}
+
+/* Opcional: Feedback visual cuando se hace clic */
+.rating:active {
+    transform: scale(0.95); /* Efecto de presión */
 }
 
 /* Button */
@@ -194,4 +201,104 @@ body {
     background-color: var(--hover);
     color: #262e38;
     transition: all 300ms;
+}
+
+/* Mensaje */
+.messages {
+    display: none;
+    width: 32.7rem;
+    height: 36rem;
+    background-image: var(--gradient);
+    border-radius: 1.5rem;
+    margin-top: -40rem;
+}
+
+@media (min-width: 768px) {
+    .messages {
+        width: 41.2rem;
+        height: 41.6rem;
+    }
+}
+
+.message__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.ilustration {
+    margin-top: 4rem;
+}
+
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.8rem;
+    height: 3.2rem;
+    background-color: #262e38;
+    border-radius: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .select {
+        width: 19.3rem;
+        height: 3.2rem;
+    }
+}
+
+.select__text {
+    font-family: var(--font);
+    color: var(--btn);
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .select__text {
+        font-size: 1.5rem;
+    }
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.message__title {
+    font-family: var(--font);
+    color: var(--title);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .message__title {
+        font-size: 2.8rem;
+    }
+}
+
+.message__text {
+    width: 36.9rem;
+    font-family: var(--font);
+    color: var(--text);
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    padding: 0 4.8rem;
+}
+
+@media (min-width: 768px) {
+    .message__text {
+        width: 43.9rem;
+        font-size: 1.5rem;
+    }
 }
